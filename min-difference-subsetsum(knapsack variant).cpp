@@ -5,7 +5,7 @@ int MinDiffSubsetSum(vector<int> &arr) {
     int n = arr.size();
     int sum = 0;
     for (int x : arr) sum += x;
-    vector<vector<bool>> dp(n + 1, vector<char>(sum + 1, 0));
+    vector<vector<bool>> dp(n + 1, vector<bool>(sum + 1, 0));
 
     for (int i = 0; i <= n; i++) dp[i][0] = 1;
     for (int i = 1; i <= n; i++) {
